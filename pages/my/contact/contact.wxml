@@ -15,7 +15,7 @@
           </view>
           <view class='tag'>
           <l-tag size="mini" bind:lintap="onModTap" data-idx='{{item.way-1}}' >添加/修改</l-tag>
-          <l-tag wx:if="{{!item.unUse}}" size="mini" bind:lintap="onDeleteTap" data-idx='{{item.way-1}}'>不使用</l-tag>
+          <l-tag wx:if="{{!item.unUse}}" size="mini" bind:lintap="onDeleteTap" data-idx='{{item.way-1}}' >不使用</l-tag>
           <l-tag wx:else size="mini" bind:lintap="onDeleteTap" data-idx='{{item.way-1}}'>使用</l-tag>
           </view>
         </view>

@@ -47,6 +47,7 @@ Page({
         })
       }
       this.getContactList(goodsDetail.owner_id)
+      console.log("aaa")
     })
   },
 

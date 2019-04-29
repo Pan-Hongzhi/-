@@ -63,14 +63,34 @@ Page({
       content: content,
       success: (res) => {
         if (res.confirm) {
-          if (thisWay.unUse == false) {
-            this.unUseThisWay(idx, thisWay)
-          } else {
+          if (thisWay.unUse) {
             this.useThisWay(idx, thisWay)
+          } else {
+            // 保证提供一种联系方式
+            if (this.leastOneContact()) {
+              this.unUseThisWay(idx, thisWay)
+            } else {
+              wx.showModal({
+                title: '提示',
+                content: '请至少提供一种联系方式',
+                showCancel: false,
+              })
+            }
           }
         }
       },
     })
+  },
+
+  leastOneContact: function() {
+    var contactArr = this.data.contacts
+    var flag = 0
+    for (var i = 0; i < contactArr.length; i++) {
+      if (contactArr[i].unUse == false) {
+        flag += 1
+      }
+    }
+    return (flag >= 2) ? true : false
   },
 
   unUseThisWay: function(idx, thisWay) {
