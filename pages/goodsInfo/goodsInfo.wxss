@@ -1,0 +1,133 @@
+/* pages/goodsInfo/goodsInfo.wxss */
+
+.title-container {
+    margin-top: 20rpx;
+    background-color: #fff;
+    padding-bottom: 20rpx;
+    padding-right: 28rpx;
+    padding-left: 18rpx;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    width: 300rpx;
+    color: #fc3;
+}
+
+.price text {
+    width: 80rpx;
+    font-size: 48rpx;
+}
+
+.view {
+    color: #333;
+    margin-right: 10rpx;
+}
+
+.user-container {
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    height: 150rpx;
+    padding-left: 18rpx;
+}
+
+.avatar-img {
+    margin-right: 20rpx;
+}
+
+.nickname-college {
+    display: flex;
+    flex-direction: row;
+    color: #333;
+}
+
+.nickname {
+    width: 260rpx;
+}
+
+.college {
+    color: #3963bc;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detail-container {
+    margin-top: 20rpx;
+    background-color: #fff;
+    padding-bottom: 46px;
+    padding-left: 18rpx;
+}
+
+.detail {
+    /* margin-left: 28rpx; */
+    margin-bottom: 10rpx;
+}
+
+.detail-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-imgs image {
+    width: 720rpx;
+    margin-bottom: 20rpx;
+    margin-right: 18rpx;
+}
+
+.bottom-container {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.want {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.want::after{
+    border: none;
+}
+
+.contact{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3963BC;
+}
+
+.l-button{
+  margin-top: 10rpx;
+}
+

@@ -1,0 +1,22 @@
+/* pages/my/collection/collection.wxss */
+@import "../../template/goodsItem-template/goodsItem-template.wxss";
+
+/* .category-header {
+  height: 400rpx;
+  margin-bottom:30rpx;
+  position: relative;
+}
+
+.category-header image{
+  width: 100%;
+  height: 100%;
+} */
+
+.no-data{
+    display: flex;
+    height: 140rpx;
+    font-size: 18px;
+    color: #ccc;
+    align-items: center;
+    justify-content: center;
+}

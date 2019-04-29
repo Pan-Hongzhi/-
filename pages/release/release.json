@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-card": "/linui/card/index"
+  },
+  "navigationBarBackgroundColor": "#3963BC",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我要发布"
+}

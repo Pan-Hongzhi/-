@@ -1,0 +1,23 @@
+/* pages/my/feedback/feedback.wxss */
+
+.no-data {
+  display: flex;
+  height: 140rpx;
+  font-size: 18px;
+  color: #ccc;
+  align-items: center;
+  justify-content: center;
+}
+
+.textarea{
+  margin-left: 20rpx;
+}
+
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 60%;
+}
+
+
+

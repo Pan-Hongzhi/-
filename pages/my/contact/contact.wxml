@@ -1,0 +1,40 @@
+<!--pages/my/contact/contact.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">填写您的联系方式</view>
+    <view class="page__desc">请至少提供一种，便于买家与您取得联系^_^</view>
+  </view>
+
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+      <label wx:for='{{contacts}}' wx:key='contacts'>
+        <view class='head'>
+          <view class="weui-cells__title">
+            {{item.value}}
+            <text hidden='{{!item.unUse}}'>（未展示）</text>
+          </view>
+          <view class='tag'>
+          <l-tag size="mini" bind:lintap="onModTap" data-idx='{{item.way-1}}' >添加/修改</l-tag>
+          <l-tag wx:if="{{!item.unUse}}" size="mini" bind:lintap="onDeleteTap" data-idx='{{item.way-1}}'>不使用</l-tag>
+          <l-tag wx:else size="mini" bind:lintap="onDeleteTap" data-idx='{{item.way-1}}'>使用</l-tag>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" style="{{item.unUse?'color:#999':''}}" name='{{item.way}}' value='{{item.content}}' disabled='{{!item.modify}}' focus='{{item.modify}}' placeholder="请输入文本"/>
+            </view>
+          </view>
+        </view>
+      </label>
+
+      <view class="button-sp-area">
+        <button class="weui-btn" form-type="submit" type='primary' disabled='{{!isModify}}' loading='{{loading}}'>保存修改</button>
+      </view>
+
+    </form>
+  </view>
+
+
+
+</view>

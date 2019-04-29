@@ -1,0 +1,49 @@
+<view>
+
+  <!-- avatar -->
+  <view class="my-header">
+    <view wx:if="{{isAuthorization}}">
+      <l-avatar open-data="{{['userAvatarUrl','userNickName']}}" />
+    </view>
+    <view wx:else>
+      <l-avatar text="未获取昵称" placement="right" src="/images/grid/noLogin.png" />
+    </view>
+  </view>
+
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfoFromBtn" hidden="{{isAuthorization}}" >点击获取微信授权</button>
+
+  <!-- 通告栏 -->
+  <l-notice-bar style="margin-bottom:20rpx" front-icon-name="notification"  front-icon-size="20" type="swip" swip-arr="{{noticeArr}}">
+  </l-notice-bar>
+
+  <!-- grid -->
+  <view class="weui-grids">
+    <block wx:for="{{grids}}" wx:for-item="grid" wx:key="grid">
+      <navigator url="{{grid.gotoUrl}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="{{grid.imgSrc}}" />
+        <view class="weui-grid__label">{{grid.name}}</view>
+      </navigator>
+    </block>
+  </view>
+
+  <!-- list -->
+  <view class="weui-cells weui-cells_after-title" style="margin-top:120rpx;">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="contact/contact" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">设置联系方式</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="about/about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">关于本应用</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+
+  <view>
+    <button class="button" open-type="share">分享给朋友</button>
+    <view class="hr"></view>
+  </view>
+
+
+</view>

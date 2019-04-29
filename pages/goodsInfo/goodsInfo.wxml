@@ -1,0 +1,59 @@
+<!--pages/goodsInfo/goodsInfo.wxml-->
+<view>
+  <view class='title-container'>
+    <text class='title'>{{goodsDetail.title}}</text>
+    <view class='price-container'>
+      <view class='price'>￥
+        <text>{{goodsDetail.price}}</text>
+      </view>
+      <view class='view'>{{goodsDetail.viewed}}浏览 | {{goodsDetail.collected}}想要</view>
+    </view>
+    <view>
+      <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large">{{goodsDetail.category_id.categoryItem}}</l-tag>
+    </view>
+    <view class='l-button' hidden='{{!fromMyRelease}}'>
+    <l-button wx:if="{{!isDeleted}}" size="mini" shape="square" bind:lintap="deleteGoods">
+        下架</l-button>
+      <l-button wx:else type="error" type="error" size="mini" shape="square" plain>
+        已下架</l-button>
+    </view>
+  </view>
+
+  <view class='user-container'>
+    <view class="avatar-img">
+      <l-avatar size="100" src="{{goodsDetail.user_id.avatar}}" />
+    </view>
+    <view class='user-text'>
+      <view class='nickname-college'>
+        <view class='nickname'>{{goodsDetail.user_id.nickname}}</view>
+        <view class='college'>{{goodsDetail.user_id.college}}学院</view>
+      </view>
+      <view>发布于{{goodsDetail.time_off}}</view>
+    </view>
+  </view>
+
+  <view class='detail-container'>
+    <view style='font-size:20px;'>商品详情</view>
+    <text class='detail'>{{goodsDetail.detail}}</text>
+    <view class='detail-imgs'>
+      <block wx:for="{{goodsDetail.images}}" wx:key="goodsDetail-images">
+        <image mode='widthFix' src='{{item.url}}' />
+      </block>
+    </view>
+  </view>
+
+  <view class='bottom-container'>
+    <view class='want' bindtap='tapWant'>
+      <l-icon name="favor" size="38" color='{{isConllected?"#fc3":"#333"}}' />
+      <view style='color:{{isConllected?"#fc3":"#333"}}; margin-left:8rpx;'>想要</view>
+    </view>
+    <button class='want' open-type="share">
+      <l-icon name="share" size="38" color='#333' />
+      <view style="color:#333; margin-left:8rpx; font-size: 16px;">分享</view>
+    </button>
+    <view class='contact' bindtap='tapContact'>
+      <l-icon name="default" size="38" color='#fff' />
+      <view style="color:#fff; margin-left:8rpx;">联系卖家</view>
+    </view>
+  </view>
+</view>

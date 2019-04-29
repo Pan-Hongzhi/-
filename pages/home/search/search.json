@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "l-card": "/linui/card/index",
+        "l-loadmore": "/linui/loadmore/index"
+    },
+    "navigationBarTitleText": "搜索结果",
+    "navigationBarBackgroundColor": "#3963BC",
+    "navigationBarTextStyle": "white"
+}

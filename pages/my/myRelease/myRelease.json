@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "l-card": "/linui/card/index",
+        "l-icon": "/linui/icon/index",
+        "l-tag": "/linui/tag/index"
+    },
+    "navigationBarTitleText": "我的发布",
+    "navigationBarBackgroundColor": "#3963BC",
+    "navigationBarTextStyle": "white"
+}

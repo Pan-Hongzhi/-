@@ -1,0 +1,18 @@
+@import "../template/goodsItem-template/goodsItem-template.wxss";
+
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+
+.banner-item{
+  height: 100%;
+  width: 100%;
+}
+.banner-item image{
+  height: 100%;
+  width: 100%;
+}

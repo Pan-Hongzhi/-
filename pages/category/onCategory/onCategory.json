@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "l-card": "/linui/card/index",
+        "l-icon": "/linui/icon/index",
+        "l-tag": "/linui/tag/index"
+    }
+}

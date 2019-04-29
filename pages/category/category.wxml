@@ -1,0 +1,17 @@
+<view>
+
+    <!-- 头图 -->
+    <view class="header">
+        <image class='header-bg' src='/images/category/bd.png'></image>
+        <text class='header-desc'>在这里 找到你心仪的东西</text>
+    </view>
+
+
+    <!-- 分类列表 -->
+    <view class="main">
+        <navi-card wx:for="{{categorys}}" wx:for-item="category" wx:key="category" data-id="{{index}}" title="{{category.title}}" icon="{{category.icon}}" data-title="{{category.title}}" data-navigateMark="{{category.navigateMark}}" bindtap="onCategory" />
+    </view>
+
+
+
+</view>

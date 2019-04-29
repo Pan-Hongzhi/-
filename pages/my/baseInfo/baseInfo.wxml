@@ -1,0 +1,56 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">填写基本信息</view>
+    <view class="page__desc">完成后请记得保存修改哦^_^</view>
+  </view>
+
+  <!-- 表单 -->
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+      <text class="weui-cells__title">性别</text>
+      <view class="hr"></view>
+      <radio-group name='sex' bindchange='onBindChange'>
+        <label class="weui-cell weui-check__label" wx:for='{{sexArray}}' wx:key='sexArray'>
+          <radio value="{{item.sex}}" checked='{{item.checked}}' />
+          <view class="weui-cell__bd">{{item.value}}</view>
+        </label>
+      </radio-group>
+      <view class="hr"></view>
+
+      <view class="weui-cells__title">学院</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__bd">
+            <picker name='college' bindchange="bindPickerChange" value="{{baseInfo.college}}" range="{{colleges}}">
+              <view class="weui-select">{{baseInfo.college}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">专业</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入你的专业" name="major" maxlength="15" value='{{baseInfo.major}}' bindinput='onBindInput' />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">签名</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="尽情展示自己..." style="height:3.3em" name='sign' value='{{baseInfo.sign}}' bindinput="handleContentInput" maxlength="50" />
+            <view class="weui-textarea-counter">{{contentCount}}/50</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="button-sp-area">
+        <button class="weui-btn" form-type="submit" type='primary' disabled='{{!isModify}}' loading='{{loading}}' open-type="getUserInfo" bindgetuserinfo="getUserInfoFromBtn">保存修改</button>
+      </view>
+    </form>
+  </view>
+
+</view>

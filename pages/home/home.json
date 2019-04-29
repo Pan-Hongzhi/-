@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "l-card": "/linui/card/index",
+    "l-icon": "/linui/icon/index",
+    "l-tag": "/linui/tag/index",
+    "l-tabs": "/linui/tabs/index",
+    "l-tabpanel": "/linui/tabpanel/index",
+    "l-avatar": "/linui/avatar/index",
+    "l-loadmore": "/linui/loadmore/index"
+  },
+  "navigationBarTitleText": "延大闲置宝",
+  "navigationBarBackgroundColor": "#3963BC",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

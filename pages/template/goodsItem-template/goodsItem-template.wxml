@@ -1,0 +1,26 @@
+<template name="goodsItem">
+    <view bindtap="gotoGoodsInfo" data-id="{{item.id}}">
+        <l-card type="avatar" full l-class="card" image="{{item.user_id.avatar}}" title="{{item.user_id.nickname}}" describe="{{item.time_off}}">
+            <view>
+                <block wx:for="{{item.images}}" wx:for-item='imgItem' wx:key="goods-list-imgs" wx:if="{{index<3}}">
+                    <image class='img' src='{{imgItem.url}}' mode='aspectFill' />
+                </block>
+            </view>
+            <view class="avter-content">
+                {{item.title}}
+            </view>
+            <view class="avter-share-container">
+                <view class="like-container">
+                    <l-icon name="eye" color="#666" size="28" />
+                    <view class="number">{{item.viewed}}浏览</view>
+                </view>
+                <view class="like-container">
+                    <l-icon name="favor" color="#666" size="28" />
+                    <view class="number">{{item.collected}}收藏</view>
+                </view>
+            </view>
+            <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large">￥ {{item.price}}</l-tag>
+        </l-card>
+        <!-- <view class="hr"></view> -->
+    </view>
+</template>

@@ -1,0 +1,9 @@
+<template name="goodsItem-search">
+    <view bindtap="gotoGoodsInfo" data-id="{{item.id}}">
+        <l-card type="primary" l-class="card" image="{{item.images[0].url}}" title="{{item.title}}">
+            <view class="content">
+                {{item.detail}}
+            </view>
+        </l-card>
+    </view>
+</template>

@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<import src='../../template/goodsItem-search-template/goodsItem-search-template.wxml' />
+
+<view wx:if="{{searchResList.length==0}}" class="no-data">
+    空空如也 ~
+</view>
+
+<view wx:else>
+    <l-loadmore show="{{loadmore.show}}" type="{{loadmore.isLoadedAll?'end':'loading'}}" loading-text="努力加载中..." end-text="我是有底线的~" line="true">
+        <view slot="content">
+            <block wx:for="{{searchResList}}" wx:key="searchResList">
+                <template is='goodsItem-search' data='{{item}}' />
+            </block>
+        </view>
+    </l-loadmore>
+</view>

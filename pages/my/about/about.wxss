@@ -1,0 +1,10 @@
+/* pages/my/about/about.wxss */
+
+.no-data {
+  display: flex;
+  height: 140rpx;
+  font-size: 18px;
+  color: #ccc;
+  align-items: center;
+  justify-content: center;
+}

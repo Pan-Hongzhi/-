@@ -1,0 +1,20 @@
+<!--pages/my/feedback/feedback.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">填写您的意见反馈</view>
+    <view class="page__desc">您的反馈，是我们前进的方向^_^</view>
+  </view>
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+      <view class='textarea'>
+        <l-textarea name="textarea" value="{{value}}" indicator="{{true}}" maxlength="220" auto-height="{{true}}" placeholder="请输入..." bind:linchange="bindInput"/>
+      </view>
+      <view class="button-sp-area">
+        <button class="weui-btn" form-type="submit" type='primary' disabled='{{!isModify}}' loading='{{loading}}'>提交信息</button>
+      </view>
+    </form>
+  </view>
+
+</view>
+
+

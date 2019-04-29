@@ -1,0 +1,19 @@
+<!--pages/category/onCategory/onCategory.wxml-->
+<import src='../../template/goodsItem-template/goodsItem-template.wxml' />
+
+<view>
+  <view class='category-header'>
+    <image src='{{categoryData.img.url}}' mode='aspectFill' />
+  </view>
+
+  <view wx:if="{{categoryData.goods.length==0}}" class="no-data">
+    空空如也 ~
+  </view>
+
+  <view>
+    <block wx:for="{{categoryData.goods}}" wx:key="categoryData-goods">
+      <template is='goodsItem' data='{{item}}' />
+    </block>
+  </view>
+
+</view>

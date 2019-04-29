@@ -1,0 +1,46 @@
+.card {
+    margin: 10rpx auto !important;
+}
+
+.img {
+    width: 200rpx;
+    height: 200rpx;
+    background-color: #eee;
+    justify-content: space-around;
+    margin-right: 28rpx;
+}
+
+.avter-content {
+    color: #333;
+    font-size: 32rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
+.avter-share-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.like-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40rpx;
+    align-items: center;
+}
+
+.number {
+    color: #666;
+    font-size: 24rpx;
+    margin-left: 12rpx;
+}
+
+.hr {
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+}

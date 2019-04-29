@@ -1,0 +1,19 @@
+<!--pages/my/collection/collection.wxml-->
+<import src='../../template/goodsItem-template/goodsItem-template.wxml' />
+
+<view>
+  <!-- <view class='category-header'>
+        <image src='{{categoryData.img.url}}' mode='aspectFill' />
+    </view> -->
+
+  <view wx:if="{{collectionList.length==0}}" class="no-data">
+    空空如也 ~
+  </view>
+
+  <view>
+    <block wx:for="{{collectionList}}" wx:key="collectionList">
+      <template is='goodsItem' data='{{item}}' />
+    </block>
+  </view>
+
+</view>

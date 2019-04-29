@@ -1,0 +1,15 @@
+<view>
+
+
+  <view class='release-card'>
+    <l-card type="cover" l-class="card" image="/images/release/1.png" title="发布闲置" bindtap="gotoRelease">
+      <view class="content">
+        转手你的闲置，让他继续发光发亮！
+      </view>
+    </l-card>
+  </view>
+
+
+
+
+</view>

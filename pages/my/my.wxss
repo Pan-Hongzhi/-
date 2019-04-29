@@ -1,0 +1,24 @@
+.my-header{
+    background-color: #3963BC;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 30rpx;
+    font-size: 28rpx;
+}
+
+.button{
+  background-color: #fff;
+  font-size: 17px;
+  text-align: start;
+}
+
+.button::after{
+    border: none;
+}
+
+.hr {
+  height: 1rpx;
+  width: 100%;
+  background-color: #d9d9d9;
+}

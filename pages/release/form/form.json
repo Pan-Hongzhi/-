@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "l-message": "/linui/message/index"
+    },
+    "navigationBarBackgroundColor": "#3963BC",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "发布闲置"
+}

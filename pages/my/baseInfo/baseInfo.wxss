@@ -1,0 +1,13 @@
+/* pages/my/userInfo/userInfo.wxss */
+.hr {
+  margin-top: 10rpx;
+  height: 1px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 60%;
+}

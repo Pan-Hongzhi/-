@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "l-tag": "/linui/tag/index",
+        "l-avatar": "/linui/avatar/index",
+        "l-icon": "/linui/icon/index",
+        "l-button": "/linui/button/index"
+    },
+    "navigationBarTitleText": "商品详情",
+    "navigationBarBackgroundColor": "#3963BC",
+    "navigationBarTextStyle": "white"
+}

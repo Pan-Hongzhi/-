@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+   "l-notice-bar": "/linui/notice-bar/index",
+   "navi-card": "/linui/navi-card/index"
+  },
+  "navigationBarTitleText": "全部分类",
+  "navigationBarBackgroundColor": "#3963BC",
+  "navigationBarTextStyle": "white"
+}

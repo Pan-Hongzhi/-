@@ -1,0 +1,82 @@
+<view class="page">
+
+  <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">添加图片（长按图片可删除）</view>
+            <view class="weui-uploader__info">{{imgArray.length}}/6</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{imgArray}}" wx:key="*this">
+                <view class="weui-uploader__file" bindtap="previewImage" bindlongpress='deleteImg' data-id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit">
+
+    <view class="weui-cells__title">标题</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input name='title' class="weui-input" placeholder="在此填写宝贝名称，如“松下冰箱”" maxlength="40" />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">描述</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea name='detail' class="weui-textarea" placeholder="在此描述你的宝贝：如品牌、规格、成色、购买渠道、转手原因等" style="height: 3.3em" maxlength="200" auto-height="{{true}}" bindinput="handleContentInput" />
+
+          <view class="weui-textarea-counter">{{contentCount}}/200</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">选择</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">分类</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker name='category' bindchange="bindPickerChange" value="{{categoryIndex}}" range="{{categorys}}">
+            <view class="weui-select weui-select_in-select-after">{{categorys[categoryIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">出价</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input name='price' class="weui-input" type='number' maxlength="5" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="button-sp-area">
+      <button class="weui-btn" form-type="submit" type='primary'>一键发布</button>
+    </view>
+  </form>
+
+  <l-message />
+
+
+</view>

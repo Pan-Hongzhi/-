@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "l-avatar": "/linui/avatar/index",
+        "l-notice-bar": "/linui/notice-bar/index"
+        
+    },
+    "navigationBarBackgroundColor": "#3963BC",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "个人中心"
+}
